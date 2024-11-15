@@ -10,8 +10,8 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             <Image
               src="/assets/images/logo.png"
               alt="logo"
-              width={80}
-              height={80}
+              width={60}
+              height={60}
               className="h-auto"
             />
             <h1 className="text-3xl text-white ">CloudWise</h1>
@@ -36,13 +36,16 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       </section>
       <section className="flex flex-1 flex-col items-center bg-white p-4 py-10 lg:justify-center">
         <div className="mb-16 lg:hidden">
-          <Image
-            src="/assets/icons/logo-full-brand.svg"
-            alt="logo"
-            width={100}
-            height={100}
-            className="h-auto w-[200px] lg:w-[250px]"
-          ></Image>
+          <div className="flex items-center gap-5">
+            <Image
+              src="/assets/images/logo2.png"
+              alt="logo"
+              width={50}
+              height={55}
+              className="h-auto"
+            ></Image>
+            <h1 className="text-3xl text-brand ">CloudWise</h1>
+          </div>
         </div>
         {children}
       </section>
