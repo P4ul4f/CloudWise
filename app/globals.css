@@ -97,6 +97,16 @@
   .overline {
     @apply text-[10px] leading-[14px] font-normal;
   }
+  
+  .text-gradient {
+    background: rgb(157, 194, 242);
+    background: radial-gradient(circle, rgba(157, 194, 242, 1) 0%, rgba(161, 150, 228, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-emphasis-color: transparent;
+  }
+  
 
   /* ===== HELPER CLASSES */
   .container {

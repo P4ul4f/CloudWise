@@ -37,7 +37,7 @@ const MobileNavigation = ({
 
   return (
     <header className="mobile-header">
-      <Image src="/assets/images/logo2.png" alt="logo" width={50} height={5} />
+      <Image src="/assets/images/minilogo.png" alt="logo" width={55} height={10} />
       <Sheet open={open} onOpenChange={setOpen}>
         <SheetTrigger>
           <Image

@@ -13,16 +13,16 @@ interface Props {
   email: string;
 }
 
-const Sidebar = ({fullName, avatar, email}: Props) => {
+const Sidebar = ({ fullName, avatar, email }: Props) => {
   const pathname = usePathname();
 
   return (
     <aside className="sidebar">
-      <Link href="/">
+      <Link href="/" className="flex items-center gap-4">
         <Image
           src="/assets/images/logo2.png"
           alt="logo"
-          width={60}
+          width={50}
           height={55}
           className="hidden h-auto lg:block"
         />
@@ -33,6 +33,7 @@ const Sidebar = ({fullName, avatar, email}: Props) => {
           height={40}
           className="lg:hidden"
         />
+        <h1 className="h2 text-gradient hidden lg:block ">CloudWise</h1>
       </Link>
       <nav className="sidebar-nav">
         <ul className="flex flex-1 flex-col gap-6">
@@ -61,23 +62,23 @@ const Sidebar = ({fullName, avatar, email}: Props) => {
         </ul>
       </nav>
       <Image
-        src="/assets/images/files-2.png"
+        src="/assets/images/sidebar.png"
         alt="logo"
         width={506}
         height={418}
-        className="w-full"
+        className="hidden w-full lg:block"
       />
       <div className="sidebar-user-info">
         <Image
-        src={avatar}
-        alt="avatar"
-        width={50}
-        height={50}
-        className="sidebar-user-avatar"
+          src={avatar}
+          alt="avatar"
+          width={50}
+          height={50}
+          className="sidebar-user-avatar"
         />
         <div className="hidden lg:block">
-            <p className="subtitle-2 capitalize">{fullName}</p>
-            <p className="caption">{email}</p>
+          <p className="subtitle-2 capitalize">{fullName}</p>
+          <p className="caption">{email}</p>
         </div>
       </div>
     </aside>
