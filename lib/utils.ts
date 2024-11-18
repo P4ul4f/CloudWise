@@ -112,6 +112,7 @@ export const formatDateTime = (isoString: string | null | undefined) => {
 
 export const getFileIcon = (
   extension: string | undefined,
+  // eslint-disable-next-line no-undef
   type: FileType | string,
 ) => {
   switch (extension) {
@@ -183,7 +184,20 @@ export const constructDownloadUrl = (bucketFileId: string) => {
 };
 
 // DASHBOARD UTILS
-export const getUsageSummary = (totalSpace: any) => {
+interface SpaceUsage {
+  size: number;
+  latestDate: string;
+}
+
+interface TotalSpace {
+  document: SpaceUsage;
+  image: SpaceUsage;
+  video: SpaceUsage;
+  audio: SpaceUsage;
+  other: SpaceUsage;
+}
+
+export const getUsageSummary = (totalSpace: TotalSpace) => {
   return [
     {
       title: "Documents",
